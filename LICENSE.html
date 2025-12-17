@@ -1,0 +1,46 @@
+<DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name=""viewport" content="width=device-width, intial-scale=1.0">
+      <title>RIFT Files License</title>
+      <style>
+        body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.6; margin: 40px; background-color: #f9f9f9; color: #222; }
+        h1 { color: #ee220c; font-size: 2em; }
+        h2 { margin-top: 1.5em; color: #ee220c; font-size: 1.5em; }
+        pre { background: #eee; padding: 10px; border-radius: 4px; overflow-x: auto; }
+        .badges { display: flex; gap: 10px; margin-bottom: 20px; }
+      </style>
+    </head>
+    <body>
+
+      <div class="badges">
+        <img src="https://img.shields.io/badge/RIFT-License-00a2ff?labelColor=ee220c" alt="License: RIFT">
+        <img src="https://img.shields.io/badge/Board%20Approval-Required-00a2ff?labelColor=ee220c" alt="Board Approval Required">
+        <img src="https://img.shields.io/badge/Branding-Protected-00a2ff?labelColor=ee220c" alt="Branding Protected">
+      </div>
+
+      <h1>
+        <span style="color:ee220c;">RIFT</span>
+        <span style="color:00a2ff;">Files</span>
+        <span style="color:ee220c;">Repository</span>
+        <span style="color:00a2ff;">License</span>
+      </h1>
+      <p><strong>Verison 1.0 - December 17, 2025</strong></p>
+
+<!-- Where the Markdown content will be embedded -->
+<div id="license-content"></div>
+
+<!-- Script to fetch and render LICENSE.md -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+fetch('LICENSE.md')
+  .then(response => response.text())
+  .then(text => {
+    document.getElementById('license-content').innerHTML = marked.parse(text);
+  })
+  .catch(err => {
+    document.getElementById('license-content').innerHTML = '<p>Error loading license.</p>';
+    console.error(err);
+  });
+</script>
